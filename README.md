@@ -4,4 +4,4 @@ If you haven't already, make sure you have [MinGW](http://www.mingw.org/) downlo
 
 Once you're set up, you'll want to open up the build.bat file and change the directory "C:\Program Files (x86)\CodeBlocks\MinGW\bin\" to your MinGW directory. I don't know why I still have CodeBlocks on my computer (Visual Studio and 4coder are my main IDEs), but it had MinGW all set up and ready to go. Can't complain there.
 
-After that's done, main.c will be compiled to WaterBucket.exe. Run that and enjoy the simulation.
+After that's done, main.c will be compiled to WaterBuckets.exe. Run that and enjoy the simulation.
