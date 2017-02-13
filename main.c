@@ -3,11 +3,9 @@
 //		functions that are usually frowned upon.
 //	- I have done very very limited Linux work in C/C++, and as such, have made the Linux version a bit less full-fleshed out. I
 //		believe it needs to go without saying that I would put in the time to making all the features fully-cross compatible
-//		if this were a program I was writing commercially, and if I even had a version of Linux to play around with it on*
+//		if this were a program I was writing commercially, and if I even had a version of Linux to play around with it on
 //	- I avoided OOP for this task as it seemed overkill. This is a simple data task that at its base is 4 numbers.
 //	- Const protection is lame
-
-//	- *Thanks to Abner for running this on Linux to make sure it isn't a completely mess :)
 
 #include <stdio.h>
 
