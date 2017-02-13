@@ -48,7 +48,7 @@ void
 PauseFor(DWORD Milliseconds)
 {
 	// Oh gross Bret's using that nasty Sleep function. What a terrible programmer!
-	//Sleep(Milliseconds);
+	Sleep(Milliseconds);
 }
 
 bool32
@@ -179,15 +179,15 @@ UpdateBucketsDisplay(bucket *LargeBucket, bucket *SmallBucket, int32 StepsTaken)
 }
 
 void
-PromptInt(char *Str, int *N)
+PromptInt(char *Str, int32 *N)
 {
 	printf(Str);
 	// NOTE(bret): Probably not the cleanest way of validating input from the console, but it gets the job done.
-	char C = '0';
+	int32 ScanResult;
 	do {
-		C = getchar();
-	} while ((C < '0') || (C > '9'));
-	*N = C - '0';
+		ScanResult = scanf("%d", N);
+		fseek(stdin, 0, SEEK_END);
+	} while (!ScanResult);
 }
 
 __inline bool32
