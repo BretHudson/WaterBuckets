@@ -184,8 +184,12 @@ void
 PromptInt(char *Str, int *N)
 {
 	printf(Str);
-	// NOTE(bret): Not the best way of checking input but w/e
-	scanf("%d", N);
+	// NOTE(bret): Probably not the cleanest way of validating input from the console, but it gets the job done.
+	char C = '0';
+	do {
+		C = getchar();
+	} while ((C < '0') || (C > '9'));
+	*N = C - '0';
 }
 
 __inline bool32
@@ -410,6 +414,8 @@ int main()
 
 	while (1)
 	{
+		ClearConsole();
+
 		int32 LargeCapacity = 0;
 		int32 SmallCapacity = 0;
 		int32 Goal = 0;
@@ -453,9 +459,11 @@ int main()
 
 		ClearConsole();
 
-		// TODO(bret): Make it so it can break out
+		int Continue;
+		PromptInt("Do you want to run another simulation?\n('1' for Yes, '0' for No)\nInput:\t", &Continue);
+		if (!Continue)
+			break;
 	}
 
-	WaitForInput();
 	return 0;
 }
