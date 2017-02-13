@@ -1,5 +1,7 @@
 # Compiling
 
+Note: Currently only builds/runs on Windows.
+
 If you haven't already, make sure you have [MinGW](http://www.mingw.org/) downloaded. The site has a downloads button at the top, of which you'll want **MinGW/Base/gcc**. I am using the Version 4 branch (4.7.1 to be exact), however, you are free to use the Version 5 branch. If so, your mileage may vary. The the amount of options there is daunting, however, they do have a [easy to use installer](https://sourceforge.net/projects/mingw/files/latest/download) to help make things easier.
 
 Once you're set up, you'll want to open up the build.bat file and change the directory

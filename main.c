@@ -85,12 +85,7 @@ SetColor(char FColor, char BColor)
 void
 SetTextCursorPos(int32 X, int32 Y)
 {
-	// NOTE(bret): Thanks http://www.cplusplus.com/forum/general/41709/#msg225145 (wow, his Windows implementation is the same as mine. How original. Duoas gets an F)
-	int err;
-	if (!cur_term)
-		if (setupterm(NULL, STDOUT_FILENO, &err) == ERR)
-			return;
-	putp(tparm(tigetstr("cup"), Y, X, 0, 0, 0, 0, 0, 0, 0));
+	// TODO(bret): When we have access to Linux, write this
 }
 
 void
